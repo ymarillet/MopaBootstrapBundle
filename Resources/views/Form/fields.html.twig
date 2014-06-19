@@ -223,10 +223,10 @@
                 });
             </script>
         </div>
+        {{ block('form_message') }}
     {% else %}
         {{ block('form_widget_simple') }}
     {% endif %}
-    {{ block('form_message') }}
 {% else %}
     {% set attr = attr|merge({'class': attr.class|default('inline')}) %}
         {{ date_pattern|replace({
